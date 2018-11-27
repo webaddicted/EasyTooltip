@@ -9,7 +9,6 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.os.Build;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewCompat;
 import android.util.Log;
 import android.view.Gravity;
@@ -22,6 +21,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.deepaksharma.tooltip.R;
+
+import net.i2p.android.ext.floatingactionbutton.FloatingActionButton;
 
 
 /**
@@ -387,7 +388,6 @@ public class TourGuide {
         return y;
     }
 
-    @SuppressLint("RestrictedApi")
     private FloatingActionButton setupAndAddFABToFrameLayout(final FrameLayoutWithHole frameLayoutWithHole){
         // invisFab is invisible, and it's only used for getting the width and height
         final FloatingActionButton invisFab = new FloatingActionButton(mActivity);
@@ -399,8 +399,8 @@ public class TourGuide {
         final FloatingActionButton fab = new FloatingActionButton(mActivity);
         fab.setBackgroundColor(Color.BLUE);
         fab.setSize(FloatingActionButton.SIZE_MINI);
-//        fab.setColorNormal(mPointer.mColor);
-//        fab.setStrokeVisible(false);
+        fab.setColorNormal(mPointer.mColor);
+        fab.setStrokeVisible(false);
         fab.setClickable(false);
 
         // When invisFab is layouted, it's width and height can be used to calculate the correct position of fab

@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mTutorialHandler = TourGuide.init(activity).with(TourGuide.Technique.Click)
                     .setPointer(new Pointer()
                             .setGravity(Gravity.CENTER)
-                            .setColor(getResources().getColor(R.color.colorPrimaryDark)))
+                            .setColor(getResources().getColor(R.color.tooltip_pointer_color)))
                     .setOverlay(new Overlay()
                             .setHoleRadius(160)
                             .setBackgroundColor(getResources().getColor(R.color.tooltip_background_color))
