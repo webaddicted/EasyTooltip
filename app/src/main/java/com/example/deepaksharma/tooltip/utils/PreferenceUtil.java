@@ -85,7 +85,8 @@ public class PreferenceUtil {
     }
     /**
      * clear key preference when required
-     */
+     *https://github.com/sathishmscict/TourGuide
+     * /
     public void clearKeyPreferences(String key) {
         if (sharedPreferences != null)
             sharedPreferences.edit().remove(key).commit();
